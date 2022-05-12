@@ -135,8 +135,6 @@ LIMIT 1
 
 ---
 
----
-
 ### **Q3. Show the total confirmed cases for each province in Veneto (5), for Nov 30, Dec 31, and Jan 31 onlyy**
 ```sql
 SELECT 
@@ -166,10 +164,118 @@ WHERE
 | 2020-11-30T17:00:00Z | 5           | Veneto | 24            | Vicenza                              | 25962           |
 | 2020-12-31T17:00:00Z | 5           | Veneto | 24            | Vicenza                              | 43116           |
 | 2021-01-31T17:00:00Z | 5           | Veneto | 24            | Vicenza                              | 51279           |
+ 
+ ---
+ 
+### **Q4. Which day had the highest positivity rate in the month of December, for Toscana (9)**
+```sql
+SELECT 
+    R.date 
+    , R.region_code
+    , R.region_name 
+    , R.total_confirmed_cases/R.tests_performed AS positivity_rate
+FROM 
+    `bigquery-public-data.covid19_italy.data_by_region` R 
+WHERE 
+    DATE(R.date) BETWEEN DATE('2020-12-01') AND DATE('2020-12-31')
+    AND R.region_code = '9'
+ORDER BY 
+    4 DESC 
+LIMIT 
+    1;
+``` 
   
----
+| date                 | region_code | region_name | positivity_rate    |
+|----------------------|-------------|-------------|--------------------|
+| 2020-12-01T17:00:00Z | 9           | Toscana     | 0.0659685717888808 |
 
+ ---
+ 
+### **Q5. Which days registered the highest increase Consider 
+ June 2020, October 2020, December 2020, and March 2021, 
+ in Sicilia (19) and Basilicata (17) only**
+```sql
+SELECT 
+    R.date 
+    , R.region_code
+    , R.region_name 
+    , R.new_current_confirmed_cases
+FROM 
+    `bigquery-public-data.covid19_italy.data_by_region` R 
+WHERE 
+    (DATE(R.date) BETWEEN DATE('2020-06-01') AND DATE('2020-06-30')
+    OR DATE(R.date) BETWEEN DATE('2020-09-01') AND DATE('2020-09-30')
+    OR DATE(R.date) BETWEEN DATE('2020-12-01') AND DATE('2020-12-31')
+    OR DATE(R.date) BETWEEN DATE('2021-03-01') AND DATE('2021-03-31'))
+    AND R.region_code IN ('17','19')
+ORDER BY 
+    4 DESC  
+LIMIT 
+    1
+``` 
+  
+| date                 | region_code | region_name | new_current_confirmed_cases |
+|----------------------|-------------|-------------|-----------------------------|
+| 2021-03-31T17:00:00Z | 19          | Sicilia     | 1272                        |
+ 
+ ---
+ 
+### **Q6. Which days and regions had a negative increase in current confirmed cases? 
+Consider only region names that start with the letter ‘P’, and 
+January 01 – October 25 (2020 and 2021) only. Sort output by date **
+```sql
+SELECT 
+    R.date 
+    , R.region_code
+    , R.region_name 
+    , R.new_current_confirmed_cases
+FROM 
+    `bigquery-public-data.covid19_italy.data_by_region` R 
+WHERE 
+    (DATE(R.date) BETWEEN DATE('2020-06-01') AND DATE('2020-06-30')
+    OR DATE(R.date) BETWEEN DATE('2020-09-01') AND DATE('2020-09-30')
+    OR DATE(R.date) BETWEEN DATE('2020-12-01') AND DATE('2020-12-31')
+    OR DATE(R.date) BETWEEN DATE('2021-03-01') AND DATE('2021-03-31'))
+    AND R.region_code IN ('17','19')
+ORDER BY 
+    4 DESC  
+LIMIT 
+    1
+``` 
+| date                 | region_code | region_name  | new_current_confirmed_cases |
+|----------------------|-------------|--------------|-----------------------------|
+| 2020-02-27T18:00:00Z | 1           | Piemonte     | -1                          |
+| 2020-03-09T18:00:00Z | 1           | Piemonte     | -18                         |
+| 2020-04-01T17:00:00Z | 21          | P.A. Bolzano | -30                         |
+| 2020-04-04T17:00:00Z | 21          | P.A. Bolzano | -8                          |
+| 2020-04-08T17:00:00Z | 21          | P.A. Bolzano | -20                         |
+| 2020-04-11T17:00:00Z | 21          | P.A. Bolzano | -48                         |
+| 2020-04-13T17:00:00Z | 22          | P.A. Trento  | -2                          |
 
+ ---
+ 
+### **Q7. From your answer in the previous question (i.e. using the same columns and conditions),
+ which day and region registered the lowest case count? Adjust your query accordingly. **
+```sql
+SELECT 
+    R.date 
+    , R.region_code 
+    , R.region_name 
+    , R.new_current_confirmed_cases
+FROM 
+    `bigquery-public-data.covid19_italy.data_by_region` R
+WHERE 
+    R.region_name LIKE 'P%'
+    AND (DATE(R.date) BETWEEN DATE('2021-01-01') AND DATE('2021-10-25')
+    OR DATE(R.date) BETWEEN DATE('2020-01-01') AND DATE('2020-10-25'))
+    AND new_current_confirmed_cases < 0 
+ORDER BY 
+    4 ASC 
+LIMIT 1 
+``` 
+| date                 | region_code | region_name  | new_current_confirmed_cases |
+|----------------------|-------------|--------------|-----------------------------|
+| 2021-01-31T17:00:00Z | 21          | P.A. Bolzano | -10713                      |
   
   
   

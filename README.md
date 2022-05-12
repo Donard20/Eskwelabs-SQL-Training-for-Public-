@@ -1,4 +1,4 @@
-
+<a href="https://github.com/Donard20" target="_blank"><img src="https://img.shields.io/badge/View-My%20Profile-informational?style=for-the-badge&logo=github"></a>   <a href="https://github.com/Donard20?tab=repositories" target="_blank"><img src="https://img.shields.io/badge/View-My%20Repositories-yellow?style=for-the-badge&logo=github"></a>   <a href="https://www.linkedin.com/in/engrnard/" target="_blank"><img src="https://img.shields.io/badge/View-LinkedIn-green?style=social&logo=linkedin"></a>
 # Eskwelabs-SQL-Training-for-Public
 
 SQL Training from Day 1 to Day 3 for Public. 

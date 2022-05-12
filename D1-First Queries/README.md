@@ -20,8 +20,7 @@
 ---
 
   ## 🗂️ Dataset
-Danny has shared with you 3 key datasets for this case study:
-
+ 
 ### **```bigquery-public-data.covid19_italy.national_trends```**
 
 <details>

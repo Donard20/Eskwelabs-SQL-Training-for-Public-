@@ -17,6 +17,11 @@ because it is exercises from the [Eskwelabs](https://www.eskwelabs.com/) Data An
  - [D1-First Queries](https://github.com/Donard20/Eskwelabs-SQL-Training-for-Public-/tree/main/D1-First%20Queries)
  - [D2-Mastering Fundamentals](https://github.com/Donard20/Eskwelabs-SQL-Training-for-Public-/tree/main/D2-Mastering%20Fundamentals)
  - [D3-Aggregate Functions](https://github.com/Donard20/Eskwelabs-SQL-Training-for-Public-/tree/main/D3-Aggregate%20Functions)
+ - [D4-Test Skill](https://github.com/Donard20/Eskwelabs-SQL-Training/tree/master/D4-Test%20Skill)
+ - [D5-Fundamental Review](https://github.com/Donard20/Eskwelabs-SQL-Training/tree/master/D5-Fundamental%20Review)
+ - [D6-Joins](https://github.com/Donard20/Eskwelabs-SQL-Training/tree/master/D6-Joins)
+ - [D7-Conditioinaland Subqueries](https://github.com/Donard20/Eskwelabs-SQL-Training/tree/master/D7-Conditioinaland%20Subqueries)
+ - [D8-Mock Exam](https://github.com/Donard20/Eskwelabs-SQL-Training/tree/master/D8-Mock%20Exam)
 
 
 ## Lessons Learned

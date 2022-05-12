@@ -81,10 +81,9 @@ January 01 – October 25 (2020 and 2021) only. Sort output by date
   
 <!-- https://www.tablesgenerator.com/markdown_tables -->
 ## 🚀 Solutions
+ 
 
-### **Q1. Get the daily positivity rate for each region. Show data only for October 20 – October 25,
- and order results by date then by region name. 
-positivity rate = total cases/ total tests**
+### **Q1. Get the daily positivity rate for each region. Show data only for October 20 – October 25, and order results by date then by region name. positivity rate = total cases/ total tests**
 ```sql
 SELECT 
     R.date 
@@ -98,7 +97,7 @@ WHERE
 ORDER BY 
     1 ASC, 3 ASC;
 ``` 
-  
+ 
 | date                 | region_code | region_name           | positivity_rate      |
 |----------------------|-------------|-----------------------|----------------------|
 | 2020-10-20T17:00:00Z | 13          | Abruzzo               | 0.026130564842512756 |
@@ -112,8 +111,7 @@ ORDER BY
  
 ---
 
-### **Q2. From your answer in 1 (i.e. using the same columns and conditions),
- which region and date registered the highest positivity rate? Adjust your query accordingly**
+### **Q2. From your answer in 1 (i.e. using the same columns and conditions), which region and date registered the highest positivity rate? Adjust your query accordingly**
 ```sql
 SELECT 
     R.date 
@@ -191,9 +189,7 @@ LIMIT
 
  ---
  
-### **Q5. Which days registered the highest increase Consider 
- June 2020, October 2020, December 2020, and March 2021, 
- in Sicilia (19) and Basilicata (17) only**
+### **Q5. Which days registered the highest increase Consider June 2020, October 2020, December 2020, and March 2021, in Sicilia (19) and Basilicata (17) only**
 ```sql
 SELECT 
     R.date 
@@ -220,9 +216,7 @@ LIMIT
  
  ---
  
-### **Q6. Which days and regions had a negative increase in current confirmed cases? 
-Consider only region names that start with the letter ‘P’, and 
-January 01 – October 25 (2020 and 2021) only. Sort output by date **
+### **Q6. Which days and regions had a negative increase in current confirmed cases? Consider only region names that start with the letter ‘P’, and January 01 – October 25 (2020 and 2021) only. Sort output by date**
 ```sql
 SELECT 
     R.date 
@@ -254,8 +248,7 @@ LIMIT
 
  ---
  
-### **Q7. From your answer in the previous question (i.e. using the same columns and conditions),
- which day and region registered the lowest case count? Adjust your query accordingly. **
+### **Q7. From your answer in the previous question (i.e. using the same columns and conditions), which day and region registered the lowest case count? Adjust your query accordingly.**
 ```sql
 SELECT 
     R.date 

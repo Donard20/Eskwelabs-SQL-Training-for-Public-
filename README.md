@@ -36,7 +36,7 @@ Google Big Query SQL
 ## Screenshots
 I private my other projects/exercises. 
 If employers need to seee my portfolio on this, please contact me. Thank you
-![App Screenshot](https://github.com/Donard20/Eskwelabs-SQL-Training-for-Public-/blob/main/Images/sql.jpg)
+![App Screenshot](https://github.com/Donard20/Eskwelabs-SQL-Training-for-Public-/blob/main/IMG/sql.jpg)
 
 
 ## Used By

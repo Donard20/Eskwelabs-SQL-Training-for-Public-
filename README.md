@@ -3,7 +3,7 @@
 
 SQL Training from Day 1 to Day 3 for Public. 
 
-I put my projects private from Day 4 to Day 8 
+I private my projects from Day 4 to Day 8 
 because it is exercises from the [Eskwelabs](https://www.eskwelabs.com/) Data Analyst Bootcamp
 
 
@@ -14,9 +14,9 @@ because it is exercises from the [Eskwelabs](https://www.eskwelabs.com/) Data An
 
 ## Project File
 
- - [D1-First Queries](https://github.com/Donard20/Eskwelabs-SQL-Training-for-Public/tree/master/D1-First%20Queries)
- - [D2-Mastering Fundamentals](https://github.com/Donard20/Eskwelabs-SQL-Training-for-Public/tree/master/D2-Mastering%20Fundamentals)
- - [D3-Aggregate Functions](https://github.com/Donard20/Eskwelabs-SQL-Training-for-Public/tree/master/D3-Aggregate%20Functions)
+ - [D1-First Queries](https://github.com/Donard20/Eskwelabs-SQL-Training-for-Public-/tree/main/D1-First%20Queries)
+ - [D2-Mastering Fundamentals](https://github.com/Donard20/Eskwelabs-SQL-Training-for-Public-/tree/main/D2-Mastering%20Fundamentals)
+ - [D3-Aggregate Functions](https://github.com/Donard20/Eskwelabs-SQL-Training-for-Public-/tree/main/D3-Aggregate%20Functions)
 
 
 ## Lessons Learned

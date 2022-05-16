@@ -42,7 +42,7 @@ If employers need to seee my portfolio on this, please contact me. Thank you
 
 ## Used By
 
-This project and exercises is used by the following companies:
+This project and exercises are used by the following companies:
 
 - [Eskwelabs](https://www.eskwelabs.com/)
 

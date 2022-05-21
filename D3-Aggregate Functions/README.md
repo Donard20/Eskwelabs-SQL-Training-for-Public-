@@ -85,6 +85,11 @@ Sort results showing the highest day-count first.
 ## 🚀 Solutions
  
 
+<details>
+<summary>
+Question 1 Solution
+</summary>
+ 
 ### **Q1. What is the first and latest date recorded? Show both in one query.**
 ```sql
 SELECT 
@@ -98,7 +103,14 @@ FROM
 |----------------------|----------------------|
 | 2020-02-24T18:00:00Z | 2022-05-11T17:00:00Z |
 
+ </details>
+
  ---
+ 
+ <details>
+<summary>
+Question 2 Solution
+</summary>
   
  ### **Q2. What is the national average total current cases across all dates?.**
 ```sql
@@ -111,8 +123,15 @@ FROM
 | avg_current_cases |
 |-------------------|
 | 437657.1992574262 |
-  
+ 
+</details>
+
  ---
+ 
+ <details>
+<summary>
+Question 3 Solution
+</summary>
   
  ### **Q3. Show the average total current cases per month? Sort results per month, ascending Note: you can aggregate on the whole month by using DATE_TRUNC([date or timestamp column], PART).For ex: DATE_TRUNC(date, MONTH) will return the first day of the month for each date in the column.**
 ```sql
@@ -135,8 +154,15 @@ ORDER BY
 | 2020-05-01T00:00:00Z | 72097.741935483864 |
 | 2020-06-01T00:00:00Z | 26713.966666666667 |
 | 2020-07-01T00:00:00Z | 13155.709677419354 |
-  
+
+</details>
+
  ---
+ 
+<details>
+<summary>
+Question 4 Solution
+</summary>
   
  ### **Q4. Based on the previous question, which months registered  more an average of more than 100000 current cases? Sort results by date ascending.**
 ```sql
@@ -159,8 +185,15 @@ ORDER BY
 | 2020-10-01T00:00:00Z | 140673.38709677424 |
 | 2020-11-01T00:00:00Z | 661696.16666666651 |
 | 2020-12-01T00:00:00Z | 659546.16129032255 | 
-  
+
+ </details>
+
  ---
+ 
+<details>
+<summary>
+Question 5 Solution
+</summary>
   
  ### **Q5. Show the monthly increase of cases per regions per months of July 2021 to September 2021. Sort results by region name, then by date**
 ```sql
@@ -185,8 +218,15 @@ ORDER BY
 | 2021-08-01T00:00:00Z | 13          | Abruzzo               | 2848                |
 | 2021-09-01T00:00:00Z | 13          | Abruzzo               | 2196                |
 | 2021-07-01T00:00:00Z | 17          | Basilicata            | 452                 | 
-  
+
+</details>
+
  ---
+ 
+<details>
+<summary>
+Question 6 Solution
+</summary>
   
  ### **Q6. From the previous question, which regions and month registered an increase of more than 10000?**
 ```sql
@@ -213,9 +253,16 @@ ORDER BY
 | 2021-09-01T00:00:00Z | 15          | Campania       | 10629               |
 | 2021-08-01T00:00:00Z | 8           | Emilia-Romagna | 17719               |
 | 2021-09-01T00:00:00Z | 8           | Emilia-Romagna | 11946               |
-  
+
+</details>
+
  ---
   
+<details>
+<summary>
+Question 7 Solution
+</summary>
+ 
  ### **Q7. Which regions have an average fatality rate of less than 5%? Consider only days where total cases > 0, and sort results from highest fatality rate to lowest.**
 ```sql
 SELECT 
@@ -240,8 +287,15 @@ ORDER BY
 | 16          | Puglia                | 0.043807876211410975 |
 | 22          | P.A. Trento           | 0.043229144727641972 |
 | 9           | Toscana               | 0.040851276546268377 |
-  
+
+ </details>
+                                             
  ---
+ 
+<details>
+<summary>
+Question 8 Solution
+</summary>
   
  ### **Q8. Which province names have more than 1 unique code assigned to them?  HINT: you can use COUNT(DISTINCT()) to count only distinct values**
 ```sql
@@ -260,8 +314,15 @@ HAVING
 |--------------------------------------|-------|
 | Fuori Regione / Provincia Autonoma   | 21    |
 | In fase di definizione/aggiornamento | 21    | 
-  
+
+</details>
+
  ---
+ 
+<details>
+<summary>
+Question 9 Solution
+</summary>
   
  ### **Q9. Which regions had more than 10 days with a case increase > 2500?  Sort results showing the highest day-count first**
 ```sql
@@ -290,8 +351,8 @@ ORDER BY
 | 8           | Emilia-Romagna        | 145  | 
   
   
-  
-  
+</details>
+
   
   
   

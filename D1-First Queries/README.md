@@ -64,13 +64,19 @@ View table
 2. How many distinct provinces per region are recorded? 
 Show the code, name, and abbreviation per province as well as the region name
 3. Show the increase in current cases per day, in region code = 6
-4. How many distinct provinces per region are recorded? 
-Show the code, name, and abbreviation per province as well as the region name ?
+4. Show the positivity rate and fatality rate for each day, on a national level.
+ Take note that positivity rate = total cases/total performed,
+  while  fatality rate = total deaths/total cases**?
 
  <br />
   
 <!-- https://www.tablesgenerator.com/markdown_tables -->
 ## 🚀 Solutions
+ 
+<details>
+<summary>
+Question 1 Solution
+</summary>
 
 ### **Q1. Show the total cumulative cases per day on a national level**
 ```sql
@@ -89,8 +95,14 @@ FROM
 | 2021-09-22T17:00:00Z | 4645853               |
 | 2022-03-12T17:00:00Z | 13323128              |
 
+ </details>
  
 ---
+ 
+<details>
+<summary>
+Question 2 Solution
+</summary>
 
 ### **Q2. How many distinct provinces per region are recorded? 
 Show the code, name, and abbreviation per province as well as the region name**
@@ -115,34 +127,16 @@ FROM
 | 885           | Fuori Regione / Provincia Autonoma   |                       | Friuli Venezia Giulia |
 | 886           | Fuori Regione / Provincia Autonoma   |                       | Lazio                 |
 
----
+</details>
 
-### **Q3. Show the positivity rate and fatality rate for each day, on a national level.
- Take note that positivity rate = total cases/total performed,
-  while  fatality rate = total deaths/total cases**
-```sql
-SELECT 
-    N.date 
-    , N.total_confirmed_cases
-    , N.tests_performed
-    , N.deaths
-    , N.total_confirmed_cases/N.tests_performed AS positivity_rate 
-    , N.deaths/N.total_confirmed_cases AS fatality_rate 
-FROM 
-    `bigquery-public-data.covid19_italy.national_trends` N
-```   
-| date                 | region_code | region_name           | new_current_confirmed_cases |
-|----------------------|-------------|-----------------------|-----------------------------|
-| 2020-02-24T18:00:00Z | 6           | Friuli Venezia Giulia | 0                           |
-| 2020-02-25T18:00:00Z | 6           | Friuli Venezia Giulia | 0                           |
-| 2020-02-26T18:00:00Z | 6           | Friuli Venezia Giulia | 0                           |
-| 2020-02-27T18:00:00Z | 6           | Friuli Venezia Giulia | 0                           |
-| 2020-02-28T18:00:00Z | 6           | Friuli Venezia Giulia | 0                           |
-| 2020-02-29T17:00:00Z | 6           | Friuli Venezia Giulia | 0                           |  
-  
 ---
+ 
+<details>
+<summary>
+Question 3 Solution
+</summary>
 
-### **Q4. Show the increase in current cases per day, in region code = 6**
+### **Q3. Show the increase in current cases per day, in region code = 6**
 ```sql
 SELECT 
     R.date 
@@ -165,6 +159,42 @@ WHERE
 | 2021-08-03T17:00:00Z | 4363374               | 78004897        | 128115 | 0.0559371804567603   | 0.029361452857353049  |
 | 2020-10-13T17:00:00Z | 365467                | 12762699        | 36246  | 0.028635557416186029 | 0.0991772170948403    |
 | 2020-05-10T17:00:00Z | 219070                | 2565912         | 30560  | 0.08537705112256383  | 0.13949879034098689   |
+
+ 
+</details>
+ 
+---
+ 
+<details>
+<summary>
+Question 4 Solution
+</summary>
+
+### **Q4. Show the positivity rate and fatality rate for each day, on a national level.
+ Take note that positivity rate = total cases/total performed,
+  while  fatality rate = total deaths/total cases**
+```sql
+SELECT 
+    N.date 
+    , N.total_confirmed_cases
+    , N.tests_performed
+    , N.deaths
+    , N.total_confirmed_cases/N.tests_performed AS positivity_rate 
+    , N.deaths/N.total_confirmed_cases AS fatality_rate 
+FROM 
+    `bigquery-public-data.covid19_italy.national_trends` N
+```   
+| date                 | region_code | region_name           | new_current_confirmed_cases |
+|----------------------|-------------|-----------------------|-----------------------------|
+| 2020-02-24T18:00:00Z | 6           | Friuli Venezia Giulia | 0                           |
+| 2020-02-25T18:00:00Z | 6           | Friuli Venezia Giulia | 0                           |
+| 2020-02-26T18:00:00Z | 6           | Friuli Venezia Giulia | 0                           |
+| 2020-02-27T18:00:00Z | 6           | Friuli Venezia Giulia | 0                           |
+| 2020-02-28T18:00:00Z | 6           | Friuli Venezia Giulia | 0                           |
+| 2020-02-29T17:00:00Z | 6           | Friuli Venezia Giulia | 0                           |  
+  
+ 
+</details>
 
 ---
 

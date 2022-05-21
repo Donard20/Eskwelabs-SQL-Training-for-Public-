@@ -83,6 +83,11 @@ January 01 – October 25 (2020 and 2021) only. Sort output by date
 ## 🚀 Solutions
  
 
+<details>
+<summary>
+Question 1 Solution
+</summary>
+ 
 ### **Q1. Get the daily positivity rate for each region. Show data only for October 20 – October 25, and order results by date then by region name. positivity rate = total cases/ total tests**
 ```sql
 SELECT 
@@ -108,8 +113,15 @@ ORDER BY
 | 2020-10-20T17:00:00Z | 6           | Friuli Venezia Giulia | 0.013759128173867608 |
 | 2020-10-20T17:00:00Z | 12          | Lazio                 | 0.022911772251026141 |
 
+</details>
+
  
 ---
+ 
+<details>
+<summary>
+Question 2 Solution
+</summary>
 
 ### **Q2. From your answer in 1 (i.e. using the same columns and conditions), which region and date registered the highest positivity rate? Adjust your query accordingly**
 ```sql
@@ -131,7 +143,15 @@ LIMIT 1
 |----------------------|-------------|-------------|----------------------|
 | 2021-10-20T17:00:00Z | 11          | Marche      | 0.071956306616332011 |
 
+ 
+</details>
+
 ---
+ 
+<details>
+<summary>
+Question 3 Solution
+</summary>
 
 ### **Q3. Show the total confirmed cases for each province in Veneto (5), for Nov 30, Dec 31, and Jan 31 onlyy**
 ```sql
@@ -162,8 +182,15 @@ WHERE
 | 2020-11-30T17:00:00Z | 5           | Veneto | 24            | Vicenza                              | 25962           |
 | 2020-12-31T17:00:00Z | 5           | Veneto | 24            | Vicenza                              | 43116           |
 | 2021-01-31T17:00:00Z | 5           | Veneto | 24            | Vicenza                              | 51279           |
- 
+
+</details>
+
  ---
+ 
+<details>
+<summary>
+Question 4 Solution
+</summary>
  
 ### **Q4. Which day had the highest positivity rate in the month of December, for Toscana (9)**
 ```sql
@@ -187,7 +214,14 @@ LIMIT
 |----------------------|-------------|-------------|--------------------|
 | 2020-12-01T17:00:00Z | 9           | Toscana     | 0.0659685717888808 |
 
+</details>
+
  ---
+ 
+<details>
+<summary>
+Question 5 Solution
+</summary>
  
 ### **Q5. Which days registered the highest increase Consider June 2020, October 2020, December 2020, and March 2021, in Sicilia (19) and Basilicata (17) only**
 ```sql
@@ -213,8 +247,15 @@ LIMIT
 | date                 | region_code | region_name | new_current_confirmed_cases |
 |----------------------|-------------|-------------|-----------------------------|
 | 2021-03-31T17:00:00Z | 19          | Sicilia     | 1272                        |
- 
+
+ </details>
+
  ---
+ 
+<details>
+<summary>
+Question 6 Solution
+</summary>
  
 ### **Q6. Which days and regions had a negative increase in current confirmed cases? Consider only region names that start with the letter ‘P’, and January 01 – October 25 (2020 and 2021) only. Sort output by date**
 ```sql
@@ -246,7 +287,15 @@ LIMIT
 | 2020-04-11T17:00:00Z | 21          | P.A. Bolzano | -48                         |
 | 2020-04-13T17:00:00Z | 22          | P.A. Trento  | -2                          |
 
+ 
+ </details>
+
  ---
+ 
+<details>
+<summary>
+Question 7 Solution
+</summary>
  
 ### **Q7. From your answer in the previous question (i.e. using the same columns and conditions), which day and region registered the lowest case count? Adjust your query accordingly.**
 ```sql
@@ -270,7 +319,8 @@ LIMIT 1
 |----------------------|-------------|--------------|-----------------------------|
 | 2021-01-31T17:00:00Z | 21          | P.A. Bolzano | -10713                      |
   
-  
+ </details>
+
   
   
   

@@ -33,6 +33,23 @@ During the [Eskwelabs](https://www.eskwelabs.com/)  Data Analyst Bootcamp, I lea
 Google Big Query SQL
 
 
+
+## ✨ Certificate Training
+
+  <details>
+  <summary>
+  Analyze Data with Python
+  </summary>
+   <p align="center">
+   <a href="https://drive.google.com/file/d/1u9na3PqvbnCGCoT7aWUCRPaPkN2TSPPr/view" target="_blank"><img src="https://img.shields.io/badge/View-My%20Certificate-purple?style=for-the-badge&logo=github"></a>
+
+
+ </details>
+
+
+ </details>
+
+
 ## Screenshots
 I private my other projects/exercises. 
 If employers need to seee my portfolio on this, please contact me. Thank you

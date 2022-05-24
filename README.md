@@ -38,7 +38,7 @@ Google Big Query SQL
 
   <details>
   <summary>
-  Analyze Data with Python
+ Data Analytics Bootcamp
   </summary>
    <p align="center">
    <a href="https://drive.google.com/file/d/1u9na3PqvbnCGCoT7aWUCRPaPkN2TSPPr/view" target="_blank"><img src="https://img.shields.io/badge/View-My%20Certificate-purple?style=for-the-badge&logo=github"></a>
